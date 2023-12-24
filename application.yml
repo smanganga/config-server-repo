@@ -1,6 +1,6 @@
 salary:
   minimum: 100000
-  maximum:8000000
+  maximum: 8000000
 eureka:
   client:
     service-url:
