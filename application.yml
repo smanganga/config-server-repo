@@ -1,5 +1,5 @@
 salary:
-  minimum: 120000
+  minimum: 125000
   maximum: 8000000
 eureka:
   client:
