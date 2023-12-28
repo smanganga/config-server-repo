@@ -1,0 +1,13 @@
+spring:     
+  cloud:
+      gateway:
+        routes:
+          - id: farmer-service
+            uri: lb://farmer-service
+            predicates:
+              - Path=/farmers
+      
+          - id: customer-service
+            uri: lb://customer-service
+            predicates:
+              - Path=/customers
