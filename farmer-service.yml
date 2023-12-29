@@ -12,5 +12,5 @@ spring:
     console:
       enabled: true
 server:
-  port: ${random.int(8090,8099)}
+  port: 0
 

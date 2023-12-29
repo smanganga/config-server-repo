@@ -1,6 +1,18 @@
 spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
+      routes:
+        - id: farmer-service
+          uri: lb://farmer-service
+          predicates:
+            - Path=/api/farmers/**
+
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/api/customers/**
+    discovery:
+      enabled: true
