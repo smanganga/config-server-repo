@@ -5,11 +5,11 @@ spring:
         - id: farmer-service
           uri: lb://farmer-service
           predicates:
-            - Path=/api/farmers/**
+            - Path=/farmers/**
 
         - id: customer-service
           uri: lb://customer-service
           predicates:
-            - Path=/api/customers/**
+            - Path=/customers/**
     discovery:
       enabled: true
