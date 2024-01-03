@@ -11,5 +11,9 @@ spring:
           uri: lb://customer-service
           predicates:
             - Path=/customers/**
+        - id: inventory-service
+          uri: lb://inventory-service
+          predicates:
+            - Path=/inventory/**
     discovery:
       enabled: true
