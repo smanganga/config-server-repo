@@ -15,5 +15,9 @@ spring:
           uri: lb://inventory-service
           predicates:
             - Path=/inventory/**
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/order/**
     discovery:
       enabled: true
